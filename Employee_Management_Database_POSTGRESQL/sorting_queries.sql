@@ -106,11 +106,11 @@ SELECT * FROM empLoyees ORDER BY LENGTH(firstname) DESC;
 -- Retrieve all employees sorted by the length of their LastName in descending order.
 SELECT * FROM employees ORDER BY LENGTH(lastname) DESC;
 
--- Retrieve all employees sorted by the year of their HireDate in ascending order.
-SELECT * FROM employees ORDER BY YEAR(HireDate) ASC;
+-- Retrieve all employees sorted by the year of their HireDate in ascending order
+SELECT * FROM employees ORDER BY EXTRACT(YEAR FROM HireDate) ASC;
 
--- Retrieve all employees sorted by the month of their HireDate in ascending order.
-SELECT * FROM employees ORDER BY MONTH(HireDate) ASC;
+-- Retrieve all employees sorted by the month of their HireDate in ascending order
+SELECT * FROM employees ORDER BY EXTRACT(MONTH FROM HireDate) ASC;
 
--- Retrieve all employees sorted by the day of their HireDate in ascending order.
-SELECT * FROM employees ORDER BY DAY(HireDate) ASC;
+-- Retrieve all employees sorted by the day of their HireDate in ascending order
+SELECT * FROM employees ORDER BY EXTRACT(DAY FROM HireDate) ASC;
